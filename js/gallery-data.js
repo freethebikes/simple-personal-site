@@ -17,8 +17,12 @@
    ============================================================ */
 
 const PROJECT_PHOTOS = [
-  // --- As found ---
-  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_original_weathered_paint_rear.JPEG", caption: "As found: six decades of weathered original paint" },
+  // --- As purchased (2023, flat black) ---
+  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_black_tow_truck_front.JPEG", caption: "Day one: home on the hook, wearing its flat-black paint" },
+  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_dark_shadows_graffiti_night.JPEG", caption: "As purchased — the 'Dark Shadows' era" },
+  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_dark_shadows_graffiti_yard.JPEG", caption: "Black paint and graffiti, before the teardown began" },
+  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_dashboard_wiring_stripped.JPEG", caption: "Gauge cluster out, sorting six decades of wiring" },
+  { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_original_weathered_paint_rear.JPEG", caption: "Black stripped away — down to the weathered original paint" },
 
   // --- Engine work ---
   { project: "travco", src: "images/projects/1966 Dodge Travco/v8_timing_chain_cover_removed.JPEG", caption: "318 Poly with the timing cover off — old chain and sprockets exposed" },
@@ -38,4 +42,14 @@ const PROJECT_PHOTOS = [
   { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_campsite_oak_tree.JPEG", caption: "Camped under the oaks" },
   { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_marina_front_view.JPEG", caption: "At the marina" },
   { project: "travco", src: "images/projects/1966 Dodge Travco/dodge_rv_sunset_ocean_parking_lot.JPEG", caption: "Sunset by the water" },
+
+  // --- A727 Torqueflite rebuild ---
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_removal_undercarriage_jack.JPEG", caption: "Coming down — the A727 on the transmission jack under the rig" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_removed_on_cart.JPEG", caption: "Out and on the cart, ready for teardown" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_pan_open_valve_body.JPEG", caption: "Pan off, valve body exposed" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_case_open_clutch_pack.JPEG", caption: "Case open — clutch drums and internals" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_valve_body_disassembled.JPEG", caption: "Valve body apart — every check ball and shuttle accounted for" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_valve_body_rebuild_internals.JPEG", caption: "Valve body internals during the rebuild" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_rebuild_seals_rings_kit.JPEG", caption: "Seals, rings, and springs from the teardown" },
+  { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_torque_converter_hub_closeup.JPEG", caption: "Torque converter hub, up close" },
 ];
