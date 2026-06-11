@@ -6,11 +6,12 @@ build step. Designed for GitHub Pages.
 ## Structure
 
 ```
-index.html        — the whole site (single page)
-css/style.css     — all styling, theme variables at the top of the file
-js/main.js        — particles, typewriter, scroll reveals, log rendering
-js/log-data.js    — YOUR LOG ENTRIES (edit this to post)
-images/           — drop any images here
+index.html          — the whole site (single page)
+css/style.css       — all styling, theme variables at the top of the file
+js/main.js          — particles, typewriter, scroll reveals, log + gallery rendering
+js/log-data.js      — YOUR LOG ENTRIES (edit this to post)
+js/gallery-data.js  — YOUR PROJECT PHOTOS (edit this to add photos)
+images/projects/    — drop project photo files here
 ```
 
 ## Posting a log entry
@@ -27,6 +28,26 @@ Open `js/log-data.js` and add an object to the top of the array:
 ```
 
 Commit and push — done.
+
+## Adding project photos
+
+No database needed — photos live in the repo.
+
+1. Copy the image into `images/projects/` (jpg/png/webp; keep them under
+   ~500 KB each so the page stays fast — resize to ~1600px wide if needed).
+2. Add a line to the array in `js/gallery-data.js`:
+
+   ```js
+   { project: "travco", src: "images/projects/engine-bay.jpg", caption: "318 Poly V8 with the timing cover off" },
+   ```
+
+3. Commit and push.
+
+Photos show up as a grid in that project's card; clicking one opens a
+fullscreen lightbox (arrow keys / buttons to navigate, Esc to close).
+A project with no photos hides its gallery automatically. To give a future
+second project its own gallery, add a `data-gallery="some-id"` block in
+`index.html` and use that id in the `project` field.
 
 ## Customizing
 

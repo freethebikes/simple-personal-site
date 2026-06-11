@@ -276,6 +276,93 @@
     }
   }
 
+  /* ---------- project photo galleries + lightbox ---------- */
+  const photos = typeof PROJECT_PHOTOS !== "undefined" ? PROJECT_PHOTOS : [];
+  const lightboxState = { list: [], index: 0 };
+  let lightbox = null;
+
+  function openLightbox(list, index) {
+    if (!lightbox) {
+      lightbox = document.createElement("div");
+      lightbox.className = "lightbox";
+      lightbox.innerHTML =
+        '<button class="lightbox__close" aria-label="Close">×</button>' +
+        '<button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">‹</button>' +
+        '<figure class="lightbox__figure"><img alt="" /><figcaption></figcaption></figure>' +
+        '<button class="lightbox__nav lightbox__nav--next" aria-label="Next">›</button>';
+      document.body.appendChild(lightbox);
+
+      const show = (i) => {
+        const n = lightboxState.list.length;
+        lightboxState.index = (i + n) % n;
+        const photo = lightboxState.list[lightboxState.index];
+        const img = lightbox.querySelector("img");
+        img.src = photo.src;
+        img.alt = photo.caption || "";
+        lightbox.querySelector("figcaption").textContent = photo.caption || "";
+        const multiple = n > 1;
+        lightbox.querySelectorAll(".lightbox__nav").forEach((b) => {
+          b.style.display = multiple ? "" : "none";
+        });
+      };
+      lightbox.show = show;
+
+      const close = () => {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      };
+      lightbox.querySelector(".lightbox__close").addEventListener("click", close);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) close();
+      });
+      lightbox.querySelector(".lightbox__nav--prev").addEventListener("click", () => show(lightboxState.index - 1));
+      lightbox.querySelector(".lightbox__nav--next").addEventListener("click", () => show(lightboxState.index + 1));
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowLeft") show(lightboxState.index - 1);
+        if (e.key === "ArrowRight") show(lightboxState.index + 1);
+      });
+    }
+
+    lightboxState.list = list;
+    lightbox.show(index);
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  document.querySelectorAll("[data-gallery]").forEach((wrap) => {
+    const list = photos.filter((p) => p.project === wrap.dataset.gallery);
+    if (!list.length) return; // stays hidden
+
+    const grid = wrap.querySelector(".gallery");
+    list.forEach((photo, i) => {
+      const fig = document.createElement("figure");
+      fig.className = "gallery__item";
+      fig.tabIndex = 0;
+
+      const img = document.createElement("img");
+      img.src = photo.src;
+      img.alt = photo.caption || "Project photo";
+      img.loading = "lazy";
+
+      const cap = document.createElement("figcaption");
+      cap.textContent = photo.caption || "";
+
+      fig.append(img, cap);
+      fig.addEventListener("click", () => openLightbox(list, i));
+      fig.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLightbox(list, i);
+        }
+      });
+      grid.appendChild(fig);
+    });
+
+    wrap.hidden = false;
+  });
+
   /* ---------- footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
