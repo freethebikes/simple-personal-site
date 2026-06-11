@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freethebikes — I build useful things</title>
+  <meta name="description" content="Engineer and builder working at the intersection of software, AI, and physical systems." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">
+      <span class="nav__prompt">~/</span>freethebikes<span class="nav__cursor">_</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-section="about">About</a>
+      <a href="#interests" data-section="interests">Interests</a>
+      <a href="#log" data-section="log">Log</a>
+      <a href="#contact" data-section="contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <p class="hero__kicker reveal">// engineer · builder · lifelong learner</p>
+      <h1 class="hero__title reveal">
+        I build <span class="gradient-text">useful things</span>.
+      </h1>
+      <p class="hero__sub reveal">
+        Bridging software and physical systems —
+        <span class="typewriter" id="typewriter"></span><span class="typewriter-caret">|</span>
+      </p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="#interests">Explore my work</a>
+        <a class="btn btn--ghost" href="#log">Read the log</a>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#about" aria-label="Scroll down">
+      <span class="hero__scroll-dot"></span>
+    </a>
+  </section>
+
+  <main>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <h2 class="section__title reveal"><span class="section__num">01</span> About</h2>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              I'm an engineer who likes problems that live in the gap between
+              software and the physical world — the kind where a clean API meets
+              a stubborn machine, or where an AI model has to do something
+              actually useful.
+            </p>
+            <p>
+              My work spans software development, industrial automation, and
+              energy systems. I'm happiest when I'm prototyping: wiring,
+              welding, writing code, and figuring out why the thing that should
+              work doesn't — yet.
+            </p>
+          </div>
+          <div class="about__principles reveal">
+            <div class="principle"><span class="principle__mark">→</span> Apply engineering thinking to real-world problems</div>
+            <div class="principle"><span class="principle__mark">→</span> Bridge software and physical systems</div>
+            <div class="principle"><span class="principle__mark">→</span> Use AI to amplify human capability</div>
+            <div class="principle"><span class="principle__mark">→</span> Make complex systems understandable</div>
+            <div class="principle"><span class="principle__mark">→</span> Stay technically self-reliant</div>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__value" data-count="5">0</span><span class="stat__label">domains of practice</span></div>
+          <div class="stat"><span class="stat__value" data-count="30">0</span><span class="stat__label">interests &amp; counting</span></div>
+          <div class="stat"><span class="stat__value">∞</span><span class="stat__label">things left to learn</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERESTS ============ -->
+    <section class="section section--alt" id="interests">
+      <div class="section__inner">
+        <h2 class="section__title reveal"><span class="section__num">02</span> Interests</h2>
+        <p class="section__lead reveal">Five domains, one through-line: building things that work.</p>
+        <div class="cards" id="cards">
+
+          <article class="card reveal" style="--card-accent: #22d3ee;">
+            <div class="card__glow"></div>
+            <div class="card__icon">⌬</div>
+            <h3 class="card__title">Software &amp; AI</h3>
+            <p class="card__desc">From web architecture to local AI models — software as a force multiplier.</p>
+            <div class="card__tags">
+              <span>Web architecture</span><span>API automation</span><span>Local AI models</span>
+              <span>AI agents</span><span>Dev tooling</span><span>Voice interfaces</span><span>HCI</span>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--card-accent: #a78bfa;">
+            <div class="card__glow"></div>
+            <div class="card__icon">⚙</div>
+            <h3 class="card__title">Engineering &amp; Technology</h3>
+            <p class="card__desc">Mechanical, electrical, and everything in between — if it can be built, fixed, or reverse-engineered, I'm in.</p>
+            <div class="card__tags">
+              <span>Mechanical eng.</span><span>PLCs &amp; controls</span><span>Industrial automation</span>
+              <span>Electronics</span><span>Fabrication &amp; welding</span><span>Prototyping</span>
+              <span>Reverse engineering</span><span>HW/SW integration</span>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--card-accent: #fbbf24;">
+            <div class="card__glow"></div>
+            <div class="card__icon">☀</div>
+            <h3 class="card__title">Energy &amp; Infrastructure</h3>
+            <p class="card__desc">Solar, storage, and the power electronics that tie it together.</p>
+            <div class="card__tags">
+              <span>Solar power</span><span>Battery tech</span><span>Renewables</span>
+              <span>Power electronics</span><span>Energy efficiency</span>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--card-accent: #34d399;">
+            <div class="card__glow"></div>
+            <div class="card__icon">✎</div>
+            <h3 class="card__title">Education &amp; Learning</h3>
+            <p class="card__desc">Interactive, hands-on learning — Montessori-inspired, STEM-focused, never finished.</p>
+            <div class="card__tags">
+              <span>EdTech</span><span>Interactive learning</span><span>Montessori-inspired</span>
+              <span>STEM</span><span>Physics education</span><span>Lifelong learning</span>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--card-accent: #f87171;">
+            <div class="card__glow"></div>
+            <div class="card__icon">⚓</div>
+            <h3 class="card__title">Technical History &amp; Research</h3>
+            <p class="card__desc">How the great systems of the past were engineered — and what they still teach us.</p>
+            <div class="card__tags">
+              <span>History of technology</span><span>Naval engineering</span><span>Cold War tech</span>
+              <span>Reconnaissance systems</span><span>Historical analysis</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOG ============ -->
+    <section class="section" id="log">
+      <div class="section__inner">
+        <h2 class="section__title reveal"><span class="section__num">03</span> Log</h2>
+        <p class="section__lead reveal">
+          Short notes on what I'm building, breaking, and learning.
+          <span class="mono-hint">// edit js/log-data.js to add entries</span>
+        </p>
+        <div class="log" id="logEntries"><!-- rendered by js/main.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="section__inner section__inner--narrow">
+        <h2 class="section__title reveal"><span class="section__num">04</span> Contact</h2>
+        <p class="contact__pitch reveal">
+          Working on something interesting at the intersection of software and
+          the physical world? I'd like to hear about it.
+        </p>
+        <a class="btn btn--primary btn--big reveal" href="mailto:freethebikes@gmail.com">
+          freethebikes@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <span class="mono">~/freethebikes</span> · built with plain HTML, CSS &amp; JS ·
+      hosted on GitHub Pages · <span id="year"></span>
+    </p>
+  </footer>
+
+  <script src="js/log-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
