@@ -433,6 +433,187 @@ a { color: var(--accent); text-decoration: none; }
 
 .card:hover .card__tags span { border-color: color-mix(in srgb, var(--card-accent) 40%, var(--border)); }
 
+/* ============ PROJECTS ============ */
+.project {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 48px);
+  overflow: hidden;
+}
+
+/* gradient hairline across the top of the featured project */
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient);
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.project__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.project__title {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.project__subtitle { color: var(--text-dim); font-size: 0.95rem; margin-top: 6px; }
+
+.project__badge {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.3rem;
+  width: 68px; height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  background-clip: padding-box;
+  color: var(--accent);
+  transform: rotate(6deg);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.project:hover .project__badge { transform: rotate(-4deg) scale(1.06); }
+
+.project__intro {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.project__systems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.sys-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+
+.sys-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--card-accent) 55%, var(--border));
+}
+
+.sys-card__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.sys-card__icon {
+  font-size: 1rem;
+  color: var(--card-accent);
+  width: 32px; height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--card-accent) 12%, transparent);
+}
+
+.sys-card ul { list-style: none; }
+
+.sys-card li {
+  position: relative;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.sys-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--card-accent);
+  font-size: 0.8em;
+  top: 2px;
+}
+
+.project__approach { margin-bottom: 28px; }
+
+.project__approach-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.project__approach-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.project__approach-chips span {
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 99px;
+  transition: border-color 0.25s, transform 0.25s var(--ease-out);
+}
+
+.project__approach-chips span:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project__outcome {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  border-left: 3px solid;
+  border-image: var(--gradient) 1;
+  padding: 4px 0 4px 20px;
+  max-width: 760px;
+}
+
+.project__outcome-label {
+  color: var(--text);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .project__header { flex-direction: column-reverse; }
+}
+
 /* ============ LOG ============ */
 .log {
   position: relative;

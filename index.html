@@ -24,6 +24,7 @@
     <nav class="nav__links" id="navLinks">
       <a href="#about" data-section="about">About</a>
       <a href="#interests" data-section="interests">Interests</a>
+      <a href="#projects" data-section="projects">Projects</a>
       <a href="#log" data-section="log">Log</a>
       <a href="#contact" data-section="contact">Contact</a>
     </nav>
@@ -157,10 +158,81 @@
       </div>
     </section>
 
-    <!-- ============ LOG ============ -->
-    <section class="section" id="log">
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
       <div class="section__inner">
-        <h2 class="section__title reveal"><span class="section__num">03</span> Log</h2>
+        <h2 class="section__title reveal"><span class="section__num">03</span> Projects</h2>
+        <p class="section__lead reveal">Long-term builds where the engineering thinking gets put to work.</p>
+
+        <article class="project reveal">
+          <div class="project__header">
+            <div>
+              <p class="project__kicker">// featured · ongoing</p>
+              <h3 class="project__title">1966 Dodge Travco <span class="gradient-text">Restoration</span></h3>
+              <p class="project__subtitle">Class A motorhome · restoration &amp; systems engineering</p>
+            </div>
+            <div class="project__badge" aria-hidden="true">'66</div>
+          </div>
+
+          <p class="project__intro">
+            A long-term mechanical restoration treated not as a traditional
+            resto, but as a full-scale systems problem: mechanical, electrical,
+            and thermal subsystems interacting under real-world load
+            conditions.
+          </p>
+
+          <div class="project__systems">
+            <div class="sys-card reveal" style="--card-accent: #f87171;">
+              <h4 class="sys-card__title"><span class="sys-card__icon">⚙</span> Engine &amp; Drivetrain</h4>
+              <ul>
+                <li>Evaluated the Chrysler 318 Poly V8 with dry and wet compression testing across cylinders</li>
+                <li>Replaced the timing chain and front-end engine components; tuned timing for drivability under load</li>
+                <li>Rebuilt the three-speed A727 Torqueflite automatic in the backyard over ~2 months, including torque converter service</li>
+              </ul>
+            </div>
+            <div class="sys-card reveal" style="--card-accent: #22d3ee;">
+              <h4 class="sys-card__title"><span class="sys-card__icon">⚡</span> Electrical System</h4>
+              <ul>
+                <li>Traced charging instability to grounding issues in the engine and chassis system</li>
+                <li>Restored stable charging by correcting a faulty ground strap connection</li>
+                <li>Replaced the alternator and validated voltage stability under operating conditions</li>
+              </ul>
+            </div>
+            <div class="sys-card reveal" style="--card-accent: #fbbf24;">
+              <h4 class="sys-card__title"><span class="sys-card__icon">⛽</span> Fuel &amp; Engine Tuning</h4>
+              <ul>
+                <li>Investigated carburetor configurations and tuning behavior under RV load conditions</li>
+                <li>Worked through air/fuel mixture, idle stability, and vacuum-related drivability issues</li>
+                <li>Iteratively tested configurations for reliability rather than peak-performance tuning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project__approach reveal">
+            <h4 class="project__approach-title">Engineering approach</h4>
+            <div class="project__approach-chips">
+              <span>Root-cause failure analysis over part swapping</span>
+              <span>Validate assumptions with measurement</span>
+              <span>Treat the vehicle as an integrated system</span>
+              <span>Reliability over restoration purity</span>
+            </div>
+          </div>
+
+          <p class="project__outcome reveal">
+            <span class="project__outcome-label">Goal:</span>
+            return a complex vintage platform to dependable, road-usable
+            condition — and build a deeper understanding of how legacy
+            mechanical and electrical systems behave under modern usage
+            expectations.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LOG ============ -->
+    <section class="section section--alt" id="log">
+      <div class="section__inner">
+        <h2 class="section__title reveal"><span class="section__num">04</span> Log</h2>
         <p class="section__lead reveal">
           Short notes on what I'm building, breaking, and learning.
           <span class="mono-hint">// edit js/log-data.js to add entries</span>
@@ -170,9 +242,9 @@
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section class="section section--alt" id="contact">
+    <section class="section" id="contact">
       <div class="section__inner section__inner--narrow">
-        <h2 class="section__title reveal"><span class="section__num">04</span> Contact</h2>
+        <h2 class="section__title reveal"><span class="section__num">05</span> Contact</h2>
         <p class="contact__pitch reveal">
           Working on something interesting at the intersection of software and
           the physical world? I'd like to hear about it.
