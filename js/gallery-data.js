@@ -52,4 +52,9 @@ const PROJECT_PHOTOS = [
   { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_valve_body_rebuild_internals.JPEG", caption: "Valve body internals during the rebuild" },
   { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_rebuild_seals_rings_kit.JPEG", caption: "Seals, rings, and springs from the teardown" },
   { project: "travco-transmission", src: "images/projects/1966 Dodge Travco/transmission/transmission_torque_converter_hub_closeup.JPEG", caption: "Torque converter hub, up close" },
+
+  // --- Surf Tide Ventura 2 (Garmin Connect IQ) ---
+  { project: "garmin-tide", src: "images/projects/Garmin Tide/hero.png", caption: "Surf Tide Ventura 2 — the full watch face concept" },
+  { project: "garmin-tide", src: "images/projects/Garmin Tide/watch.png", caption: "Running on the Garmin Instinct 2" },
+  { project: "garmin-tide", src: "images/projects/Garmin Tide/display.png", caption: "Tide graph, next tide, weather, body battery, sunrise/sunset" },
 ];
