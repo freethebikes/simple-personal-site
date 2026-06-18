@@ -11,9 +11,9 @@
   --border: #232e42;
   --text: #e6ecf5;
   --text-dim: #93a1b8;
-  --accent: #22d3ee;
-  --accent-2: #a78bfa;
-  --gradient: linear-gradient(120deg, #22d3ee, #818cf8 50%, #a78bfa);
+  --accent: #f97316;
+  --accent-2: #94a3b8;
+  --gradient: linear-gradient(135deg, #f97316, #fb923c);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
   --nav-h: 64px;
@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 }
 
-::selection { background: rgba(34, 211, 238, 0.3); }
+::selection { background: rgba(249, 115, 22, 0.3); }
 
 /* subtle background grid over the whole page */
 body::before {
@@ -54,10 +54,7 @@ a { color: var(--accent); text-decoration: none; }
 .mono { font-family: var(--font-mono); font-size: 0.9em; }
 
 .gradient-text {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 /* ============ NAV ============ */
@@ -217,14 +214,14 @@ a { color: var(--accent); text-decoration: none; }
 }
 
 .btn--primary {
-  background: var(--gradient);
+  background: var(--accent);
   color: #0a0e14;
-  box-shadow: 0 4px 24px rgba(34, 211, 238, 0.25);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.2);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(34, 211, 238, 0.4);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.35);
 }
 
 .btn--ghost {
@@ -358,10 +355,7 @@ a { color: var(--accent); text-decoration: none; }
   font-family: var(--font-mono);
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 700;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .stat__label { color: var(--text-dim); font-size: 0.9rem; }
@@ -443,13 +437,14 @@ a { color: var(--accent); text-decoration: none; }
   overflow: hidden;
 }
 
-/* gradient hairline across the top of the featured project */
+/* accent hairline across the top of each project card */
 .project::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--gradient);
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.7;
 }
 
 .project__header {
@@ -596,8 +591,7 @@ a { color: var(--accent); text-decoration: none; }
 .project__outcome {
   color: var(--text-dim);
   font-size: 0.98rem;
-  border-left: 3px solid;
-  border-image: var(--gradient) 1;
+  border-left: 3px solid var(--accent);
   padding: 4px 0 4px 20px;
   max-width: 760px;
 }
@@ -848,15 +842,16 @@ a { color: var(--accent); text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(120deg, #f59e0b, #d97706);
-  color: #0a0e14;
-  box-shadow: 0 4px 24px rgba(245, 158, 11, 0.25);
+  background: #16a34a;
+  color: #f0fdf4;
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.2);
 }
 
 .btn--beer:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.45);
-  color: #0a0e14;
+  background: #15803d;
+  box-shadow: 0 8px 28px rgba(22, 163, 74, 0.35);
+  color: #f0fdf4;
 }
 
 @keyframes beer-sway {

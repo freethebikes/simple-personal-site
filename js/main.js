@@ -56,7 +56,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(34, 211, 238, 0.55)";
+        ctx.fillStyle = "rgba(251, 146, 60, 0.4)";
         ctx.fill();
       }
 
@@ -68,7 +68,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(129, 140, 248, ${0.16 * (1 - d / LINK_DIST)})`;
+            ctx.strokeStyle = `rgba(148, 163, 184, ${0.12 * (1 - d / LINK_DIST)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -204,22 +204,13 @@
   );
   sections.forEach((s) => sectionIO.observe(s));
 
-  /* ---------- card tilt + cursor glow ---------- */
+  /* ---------- card cursor glow ---------- */
   if (!reducedMotion && matchMedia("(pointer: fine)").matches) {
     document.querySelectorAll(".card").forEach((card) => {
       card.addEventListener("pointermove", (e) => {
         const r = card.getBoundingClientRect();
-        const x = e.clientX - r.left;
-        const y = e.clientY - r.top;
-        card.style.setProperty("--mx", `${x}px`);
-        card.style.setProperty("--my", `${y}px`);
-
-        const rx = ((y / r.height) - 0.5) * -6;
-        const ry = ((x / r.width) - 0.5) * 6;
-        card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
-      });
-      card.addEventListener("pointerleave", () => {
-        card.style.transform = "";
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
       });
     });
   }
