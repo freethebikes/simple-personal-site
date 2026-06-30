@@ -57,4 +57,9 @@ const PROJECT_PHOTOS = [
   { project: "garmin-tide", src: "images/projects/Garmin Tide/hero.png", caption: "Surf Tide Ventura 2 — the full watch face concept" },
   { project: "garmin-tide", src: "images/projects/Garmin Tide/watch.png", caption: "Running on the Garmin Instinct 2" },
   { project: "garmin-tide", src: "images/projects/Garmin Tide/display.png", caption: "Tide graph, next tide, weather, body battery, sunrise/sunset" },
+
+  // --- Kids Safe Player for YouTube (Amazon Fire tablet) ---
+  { project: "kids-safe-player", src: "images/projects/Kids Safe Player/home.png", caption: "Home screen — approved videos organized into learning shelves" },
+  { project: "kids-safe-player", src: "images/projects/Kids Safe Player/player.png", caption: "Full-screen player — no search, no related videos, no comments" },
+  { project: "kids-safe-player", src: "images/projects/Kids Safe Player/parental-gate.png", caption: "\"Ask a grown-up\" math gate before reaching Settings" },
 ];
